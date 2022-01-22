@@ -1,14 +1,12 @@
-import {gql} from 'graphql-request'
+import { gql } from 'graphql-request';
 
 const getBooks = gql`
-query GetBooks {
-    books {
-        author
-        title
-    }
-}
-`
+	query GetBooks {
+		books {
+			author
+			title
+		}
+	}
+`;
 
-export {
-    getBooks
-}
+export { getBooks };

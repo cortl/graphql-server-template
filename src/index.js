@@ -1,22 +1,22 @@
-import Apollo from "apollo-server";
-import {buildSchema} from "graphql";
+import Apollo from 'apollo-server';
+import { buildSchema } from 'graphql';
 import fs from 'fs';
 
-import {resolvers} from "./resolvers.js";
+import { resolvers } from './resolvers.js';
 
-const {ApolloServer} = Apollo;
+const { ApolloServer } = Apollo;
 
 const SCHEMA_PATH = 'src/schema';
 
 const typeDefs = buildSchema(
-    fs.readdirSync(SCHEMA_PATH).map((file) =>
-        fs.readFileSync(`${SCHEMA_PATH}/${file}`).toString()
-    )
-        .join('\n'));
+	fs
+		.readdirSync(SCHEMA_PATH)
+		.map((file) => fs.readFileSync(`${SCHEMA_PATH}/${file}`).toString())
+		.join('\n')
+);
 
+const server = new ApolloServer({ typeDefs, resolvers });
 
-const server = new ApolloServer({typeDefs, resolvers});
-
-server.listen().then(({url}) => {
-    console.log(`🚀 Server ready at ${url}`)
-})
+server.listen().then(({ url }) => {
+	console.log(`🚀 Server ready at ${url}`);
+});

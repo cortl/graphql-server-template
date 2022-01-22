@@ -1,18 +1,18 @@
 const books = [
-    {
-        title: 'The Awakening',
-        author: 'Kate Chopin'
-    },
-    {
-        title: 'City of Glass',
-        author: 'Paul Auster'
-    }
-]
+	{
+		title: 'The Awakening',
+		author: 'Kate Chopin',
+	},
+	{
+		title: 'City of Glass',
+		author: 'Paul Auster',
+	},
+];
 
 const resolvers = {
-    Query: {
-        books: () => books
-    }
-}
+	Query: {
+		books: () => books,
+	},
+};
 
-export {resolvers}
+export { resolvers };

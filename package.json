@@ -1,39 +1,41 @@
 {
-  "name": "graphql-server-template",
-  "version": "1.0.0",
-  "description": "Basic template for a GraphQL API server",
-  "main": "src/index.js",
-  "type": "module",
-  "scripts": {
-    "start": "node src/index.js",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/cortl/graphql-server-template.git"
-  },
-  "keywords": [
-    "graphql",
-    "server",
-    "api",
-    "javascript"
-  ],
-  "author": "Cortlan Bainbridge <hello@cortlan.dev>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cortl/graphql-server-template/issues"
-  },
-  "homepage": "https://github.com/cortl/graphql-server-template#readme",
-  "dependencies": {
-    "apollo-server": "^3.6.2",
-    "graphql": "^16.2.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.16.12",
-    "@babel/preset-env": "^7.16.11",
-    "babel-jest": "^27.4.6",
-    "graphql-request": "^3.7.0",
-    "jest": "^27.4.7",
-    "nodemon": "^2.0.15"
-  }
+	"name": "graphql-server-template",
+	"version": "1.0.0",
+	"description": "Basic template for a GraphQL API server",
+	"main": "src/index.js",
+	"type": "module",
+	"scripts": {
+		"start": "node src/index.js",
+		"format": "npx prettier --write .",
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/cortl/graphql-server-template.git"
+	},
+	"keywords": [
+		"graphql",
+		"server",
+		"api",
+		"javascript"
+	],
+	"author": "Cortlan Bainbridge <hello@cortlan.dev>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/cortl/graphql-server-template/issues"
+	},
+	"homepage": "https://github.com/cortl/graphql-server-template#readme",
+	"dependencies": {
+		"apollo-server": "^3.6.2",
+		"graphql": "^16.2.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.16.12",
+		"@babel/preset-env": "^7.16.11",
+		"babel-jest": "^27.4.6",
+		"graphql-request": "^3.7.0",
+		"jest": "^27.4.7",
+		"nodemon": "^2.0.15",
+		"prettier": "2.5.1"
+	}
 }
