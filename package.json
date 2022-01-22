@@ -2,9 +2,11 @@
   "name": "graphql-server-template",
   "version": "1.0.0",
   "description": "Basic template for a GraphQL API server",
-  "main": "index.js",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,17 @@
   "bugs": {
     "url": "https://github.com/cortl/graphql-server-template/issues"
   },
-  "homepage": "https://github.com/cortl/graphql-server-template#readme"
+  "homepage": "https://github.com/cortl/graphql-server-template#readme",
+  "dependencies": {
+    "apollo-server": "^3.6.2",
+    "graphql": "^16.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.4.6",
+    "graphql-request": "^3.7.0",
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15"
+  }
 }
