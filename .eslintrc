@@ -1,0 +1,3 @@
+{
+	"extends": "@cortl/eslint-config"
+}

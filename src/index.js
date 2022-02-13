@@ -1,6 +1,7 @@
+import fs from 'node:fs';
+
 import Apollo from 'apollo-server';
 import { buildSchema } from 'graphql';
-import fs from 'fs';
 
 import { resolvers } from './resolvers.js';
 
@@ -15,8 +16,9 @@ const typeDefs = buildSchema(
 		.join('\n')
 );
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ resolvers, typeDefs });
 
 server.listen().then(({ url }) => {
+	// eslint-disable-next-line no-console
 	console.log(`🚀 Server ready at ${url}`);
 });

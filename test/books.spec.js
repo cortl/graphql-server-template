@@ -1,5 +1,6 @@
-import { request } from 'graphql-request';
-import { getBooks } from './queries';
+import request from 'graphql-request';
+
+import { getBooks } from './queries.js';
 
 const BASE_URL = 'http://localhost:4000/';
 
